@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css'
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Your name"
+            className='form--input--text'
         />
         <input
             name="email"
@@ -62,6 +64,7 @@ function App() {
             value={formData.email}
             onChange={handleChange}
             placeholder="your@email.com"
+            className='form--input--text'
         />
         <input
             name="password"
@@ -69,6 +72,7 @@ function App() {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter your password"
+            className='form--input--text'
         />
         <input
             name="passwordConf"
@@ -76,15 +80,25 @@ function App() {
             value={formData.passwordConf}
             onChange={handleChange}
             placeholder="Confirm your password"
+            className='form--input--text'
         />
+      <div className='checkbox-wrapper'>
         <input
             name="wantNews"
             id="wantNews"
             type="checkbox"
             checked={formData.wantNews}
             onChange={handleChange}
+            className='form--input--checkbox'
         />
-        <label htmlFor='wantNews'>Recive news?</label>
+        <label 
+            htmlFor='wantNews'
+            className='form--input--label'
+        >
+            Recive news?
+      
+      </label>
+      </div>
         <button
             className='form--button'
         >
